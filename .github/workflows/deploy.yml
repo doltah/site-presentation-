@@ -1,0 +1,35 @@
+name: Deploy to Personal Server
+
+on:
+  push: 
+    branches: 
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 9022 82.66.0.201 >> ~/.ssh/known_hosts
+
+      - name: Deploy to server
+        run: |
+          rsync -avz --delete \
+            -e "ssh -i ~/.ssh/deploy_key -p 9022 -o StrictHostKeyChecking=no" \
+            ./ ${{ secrets.SSH_USER }}@82.66.0.201:${{ secrets.DEPLOY_PATH }}
+
+      - name: Restart web server (optional)
+        run: |
+          ssh -i ~/.ssh/deploy_key -p 9022 -o StrictHostKeyChecking=no \
+            ${{ secrets.SSH_USER }}@82.66.0.201 \
+            "cd ${{ secrets.DEPLOY_PATH }} && ${{ secrets.RESTART_COMMAND }}"
+        continue-on-error: true
