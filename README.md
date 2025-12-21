@@ -1,2 +1,2 @@
 # site-presentation-
-j' ai crée un site sur le quelle je me présent (parcoure : scolaire et informatique ).
+j' ai crée un site sur le quelle je me présente (parcoure : scolaire et informatique ).
