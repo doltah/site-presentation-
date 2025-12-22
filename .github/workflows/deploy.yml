@@ -31,6 +31,7 @@ jobs:
           set -e
       
           echo "DEPLOY_PATH is set (length=${#DEPLOY_PATH})"
+          echo "$DEPLOY_PATH" | sed -n l
       
           ssh -i ~/.ssh/deploy_key -p 9022 \
             "$SSH_USER@82.66.0.201" \
