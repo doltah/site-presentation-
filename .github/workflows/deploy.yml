@@ -29,7 +29,7 @@ jobs:
             --exclude='.git' \
             --exclude='.github' \
             -e "ssh -i ~/.ssh/deploy_key -p 9022" \
-            ./ ${{ secrets.SSH_USER }}@82.66.0.201:${{ secrets.DEPLOY_PATH }}
+            ./ ${{ secrets.SSH_USER }}@82.66.0.201:${{ secrets.DEPLOY_PATH }}/
 
       - name: Restart web server (optional)
         run: |
