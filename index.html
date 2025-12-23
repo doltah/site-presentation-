@@ -1,68 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrien – CV et Présentation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adrien — Site de présentation</title>
+
+  <!-- Police qui sort du lot -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <header class="hero">
+    <div class="hero-inner">
+      <h1>Bienvenue sur mon site de présentation</h1>
+      <p class="sub">Adrien — recherche d’alternance en informatique</p>
+      <a class="btn" href="cv.pdf" download>Télécharger le CV (PDF)</a>
+    </div>
+  </header>
 
-    <header>
-        <h1>Bienvenue sur mon site de présentation, c'est Adrien le roi du monde 🙂🙂🙂</h1>
-        <a class="download-btn" href="CV_Adrien_2025.pdf" target="_blank">Té
-lécharger le CV (PDF)</a>
-    </header>
+  <main class="container">
+    <section class="card">
+      <h2>Recherche</h2>
+      <p>Recherche de formation en informatique en alternance</p>
+      <p class="muted">(à venir)</p>
+    </section>
 
-    <main>
-        <section class="about">
-            <h2>Recherche de formation en informatique en alternance</h2>
-            <p>
-                (à venir)
-            </p>
-        </section>
+    <section class="card">
+      <h2>Formation</h2>
+      <ul>
+        <li>E.J.A Espace Jeunes Adultes Bastille (Novembre 2022 – Aujourd’hui)</li>
+        <li>Licence Cinéma et Audiovisuel – Université Paris III Sorbonne (2017 – 2021)</li>
+        <li>Baccalauréat ES – Lycée Fénelon (2014 – 2017)</li>
+      </ul>
+    </section>
 
-        <section>
-            <h2>Formation</h2>
-            <ul>
-                <li>E.J.A Espace Jeunes Adulte Bastille (Novembre 2022 - Auj
-ourd’hui)</li>
-                <li>Licence Cinéma et Audiovisuel – Université Paris III Sor
-bonne (2017 - 2021)</li>
-                <li>Baccalauréat ES – Lycée Fénelon (2014 - 2017)</li>
-            </ul>
-        </section>
+    <section class="card">
+      <h2>Expérience professionnelle</h2>
+      <ul>
+        <li>Service Civique – Mairie de Paris (2016 – 2017)</li>
+      </ul>
+    </section>
 
-        <section>
-            <h2>Expérience professionnelle</h2>
-            <ul>
-                <li>Service Civique – Mairie de Paris (2016 - 2017)</li>
-            </ul>
-        </section>
+    <section class="card">
+      <h2>Compétences</h2>
+      <div class="chips">
+        <span class="chip">Pack Office</span>
+        <span class="chip">Windows</span>
+        <span class="chip">Anglais LV1</span>
+      </div>
+    </section>
 
-        <section>
-            <h2>Compétences</h2>
-            <ul>
-                <li>Pack Office</li>
-                <li>Windows</li>
-                <li>Anglais LV1</li>
-            </ul>
-        </section>
+    <section class="card">
+      <h2>Loisirs</h2>
+      <p>Cinéma, tech, culture numérique</p>
+    </section>
+  </main>
 
-        <section>
-            <h2>Loisirs</h2>
-            <ul>
-                <li>Cinéma</li>
-                <li>Jeux vidéo</li>
-                <li>Sports</li>
-                <li>Équitation (galop 3)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Adrien – termite.ovh</p>
-    </footer>
-
+  <footer class="footer">
+    <p>© 2025 — Adrien</p>
+  </footer>
 </body>
 </html>
