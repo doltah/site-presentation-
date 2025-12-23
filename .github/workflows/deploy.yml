@@ -39,8 +39,6 @@ jobs:
       
           rsync -avz --delete \
             --no-perms --no-owner --no-group --omit-dir-times \
-            #--exclude='.git' \
-            #--exclude='.github' \
             -e "ssh -i ~/.ssh/deploy_key -p 9022" \
             ./ "$SSH_USER@82.66.0.201:$DEPLOY_PATH/"
 
