@@ -124,3 +124,7 @@ li{ margin: 6px 0; }
   }
   .card{ padding: 18px; }
 }
+/* Bandeau spécifique à la page Minecraft */
+.hero-minecraft {
+  background-color: #0f3d2e; /* vert foncé */
+}
