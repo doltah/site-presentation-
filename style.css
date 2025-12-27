@@ -131,4 +131,58 @@ li{ margin: 6px 0; }
 /* Bandeau noir uniquement pour la page projets (GitHub) */
 .page-projets .hero {
   background-color: #000; /* noir */
+
+}
+/* ===============================
+   STYLE GITHUB – PAGE PROJETS
+   =============================== */
+
+.page-projets .hero {
+  background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+  color: #f0f6fc;
+  border-bottom: 1px solid #30363d;
+}
+
+/* Titre */
+.page-projets .hero h1 {
+  color: #f0f6fc;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* Sous-titre / texte */
+.page-projets .hero p {
+  color: #c9d1d9;
+}
+
+/* Boutons GitHub-style */
+.page-projets .btn {
+  background-color: #21262d;
+  color: #f0f6fc;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 10px 16px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-projets .btn:hover {
+  background-color: #30363d;
+  border-color: #8b949e;
+}
+
+/* Cartes de projets (si tu en as) */
+.page-projets .card {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  color: #c9d1d9;
+}
+
+/* Liens */
+.page-projets a {
+  color: #58a6ff;
+}
+
+.page-projets a:hover {
+  text-decoration: underline;
 }
