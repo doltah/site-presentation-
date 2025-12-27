@@ -128,3 +128,7 @@ li{ margin: 6px 0; }
 .hero-minecraft {
   background-color: #0f3d2e; /* vert foncé */
 }
+/* Bandeau noir uniquement pour la page projets (GitHub) */
+.page-projets .hero {
+  background-color: #000; /* noir */
+}
