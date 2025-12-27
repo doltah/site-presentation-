@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adrien — Serveur Mail</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Bandeau noir -->
+  <header class="hero hero--dark">
+    <div class="hero-inner">
+      <h1>Serveur mail</h1>
+      <p class="hero-sub">Présentation, services, et paramètres de connexion.</p>
+
+      <a class="btn btn--ghost" href="index.html">← Retour à l’accueil</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Résumé</h2>
+      <ul class="list">
+        <li><strong>Domaine :</strong> <span class="muted">termite.ovh</span></li>
+        <li><strong>IP serveur :</strong> <span class="muted">82.66.0.201</span></li>
+        <li><strong>Fonction :</strong> <span class="muted">Envoi / Réception d’emails (SMTP / IMAP)</span></li>
+      </ul>
+      <p class="muted small">
+        (Tu peux remplacer/compléter ces infos par ton vrai domaine mail, ports, etc.)
+      </p>
+    </section>
+
+    <section class="grid-2">
+      <section class="card">
+        <h2>Services</h2>
+        <ul class="list">
+          <li><strong>SMTP (envoi)</strong> : <span class="muted">smtp.tondomaine.tld</span></li>
+          <li><strong>IMAP (réception)</strong> : <span class="muted">imap.tondomaine.tld</span></li>
+          <li><strong>Webmail</strong> : <span class="muted">https://webmail.tondomaine.tld</span></li>
+        </ul>
+        <p class="muted small">Modifie les noms d’hôtes selon ta config réelle.</p>
+      </section>
+
+      <section class="card">
+        <h2>Sécurité</h2>
+        <ul class="list">
+          <li><strong>TLS/SSL</strong> : <span class="muted">Activé (recommandé)</span></li>
+          <li><strong>SPF</strong> : <span class="muted">À configurer</span></li>
+          <li><strong>DKIM</strong> : <span class="muted">À configurer</span></li>
+          <li><strong>DMARC</strong> : <span class="muted">À configurer</span></li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="card">
+      <h2>Paramètres (exemple)</h2>
+      <div class="table">
+        <div class="row">
+          <div class="cell head">Type</div>
+          <div class="cell head">Hôte</div>
+          <div class="cell head">Port</div>
+          <div class="cell head">Chiffrement</div>
+        </div>
+        <div class="row">
+          <div class="cell">IMAP</div>
+          <div class="cell muted">imap.tondomaine.tld</div>
+          <div class="cell muted">993</div>
+          <div class="cell muted">SSL</div>
+        </div>
+        <div class="row">
+          <div class="cell">SMTP</div>
+          <div class="cell muted">smtp.tondomaine.tld</div>
+          <div class="cell muted">587</div>
+          <div class="cell muted">STARTTLS</div>
+        </div>
+      </div>
+      <p class="muted small">
+        Remplace par tes vrais ports et hôtes (selon ton serveur).
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="muted small">© Adrien — termite.ovh</p>
+    </div>
+  </footer>
+</body>
+</html>
