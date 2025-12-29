@@ -1,4 +1,4 @@
-:root{
+:root{background: #8b0000;
   --purple-red: #7b1634;
   --bg: #f6f6f8;
   --text: #1f1f25;
@@ -152,6 +152,24 @@ body{
   text-align: center;
   padding: 16px;
   color: rgba(0,0,0,0.6);
+}
+
+/* ===== PAGE MAIL : BANDEAU BLEU FONCÉ ===== */
+.hero.hero-mail{
+  background: linear-gradient(180deg, #05243a 0%, #063a5a 100%);
+  color: #f6fbff;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.hero.hero-mail .btn{
+  background-color: rgba(255,255,255,0.08);
+  color: #f6fbff;
+  border-color: rgba(255,255,255,0.12);
+}
+
+.hero.hero-mail .btn:hover,
+.hero.hero-mail .btn:focus-visible{
+  background-color: rgba(255,255,255,0.12);
 }
 
 /* ===============================
