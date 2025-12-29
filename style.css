@@ -189,3 +189,68 @@ body{
     padding: 18px;
   }
 }
+
+/* Bouton CV sticky */
+.btn--cv-sticky{
+  position: fixed;
+  bottom: calc(env(safe-area-inset-bottom, 24px));
+  right: 24px;
+  z-index: 1400;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
+  font-weight: 700;
+  border-radius: 12px;
+  background: linear-gradient(90deg,#0b74c7,#0460a0);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(2,6,23,0.35);
+  border: 0;
+}
+
+.btn--cv-sticky:focus-visible{
+  outline: 3px solid rgba(11,116,199,0.18);
+  outline-offset: 4px;
+}
+
+/* Mobile : bouton centré et pleine largeur */
+@media (max-width: 600px){
+  .btn--cv-sticky{
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: calc(env(safe-area-inset-bottom, 12px));
+    width: calc(100% - 32px);
+    max-width: 760px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.25);
+  }
+}
+/* Bouton CV sticky */
+.btn--cv-sticky {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+
+  padding: 14px 20px;
+  font-weight: 600;
+  border-radius: 12px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Mobile : bouton centré */
+@media (max-width: 600px) {
+  .btn--cv-sticky {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    bottom: 16px;
+    width: calc(100% - 32px);
+    text-align: center;
+  }
+}
