@@ -19,7 +19,7 @@
       <h1>Serveur mail</h1>
       <p class="hero-sub">Présentation, services, et paramètres de connexion.</p>
 
-      <a class="btn btn--ghost" href="index.html">← Retour à l’accueil</a>
+      <a class="btn btn--ghost" href="index.html">← Retour à l'accueil</a>
     </div>
   </header>
 
@@ -29,60 +29,89 @@
       <ul class="list">
         <li><strong>Domaine :</strong> <span class="muted">termite.ovh</span></li>
         <li><strong>IP serveur :</strong> <span class="muted">82.66.0.201</span></li>
-        <li><strong>Fonction :</strong> <span class="muted">Envoi / Réception d’emails (SMTP / IMAP)</span></li>
+        <li><strong>Fonction :</strong> <span class="muted">Envoi / Réception d'emails (SMTP / IMAP)</span></li>
       </ul>
-      <p class="muted small">
-        (Tu peux remplacer/compléter ces infos par ton vrai domaine mail, ports, etc.)
-      </p>
-    </section>
-
-    <section class="grid-2">
-      <section class="card">
-        <h2>Services</h2>
-        <ul class="list">
-          <li><strong>SMTP (envoi)</strong> : <span class="muted">smtp.tondomaine.tld</span></li>
-          <li><strong>IMAP (réception)</strong> : <span class="muted">imap.tondomaine.tld</span></li>
-          <li><strong>Webmail</strong> : <span class="muted">https://webmail.tondomaine.tld</span></li>
-        </ul>
-        <p class="muted small">Modifie les noms d’hôtes selon ta config réelle.</p>
-      </section>
-
-      <section class="card">
-        <h2>Sécurité</h2>
-        <ul class="list">
-          <li><strong>TLS/SSL</strong> : <span class="muted">Activé (recommandé)</span></li>
-          <li><strong>SPF</strong> : <span class="muted">À configurer</span></li>
-          <li><strong>DKIM</strong> : <span class="muted">À configurer</span></li>
-          <li><strong>DMARC</strong> : <span class="muted">À configurer</span></li>
-        </ul>
-      </section>
     </section>
 
     <section class="card">
-      <h2>Paramètres (exemple)</h2>
-      <div class="table">
-        <div class="row">
-          <div class="cell head">Type</div>
-          <div class="cell head">Hôte</div>
-          <div class="cell head">Port</div>
-          <div class="cell head">Chiffrement</div>
-        </div>
-        <div class="row">
-          <div class="cell">IMAP</div>
-          <div class="cell muted">imap.tondomaine.tld</div>
-          <div class="cell muted">993</div>
-          <div class="cell muted">SSL</div>
-        </div>
-        <div class="row">
-          <div class="cell">SMTP</div>
-          <div class="cell muted">smtp.tondomaine.tld</div>
-          <div class="cell muted">587</div>
-          <div class="cell muted">STARTTLS</div>
-        </div>
-      </div>
-      <p class="muted small">
-        Remplace par tes vrais ports et hôtes (selon ton serveur).
+      <h2>🎯 1. Objectif du projet</h2>
+      <p>
+        L'objectif principal de mon projet était de comprendre le fonctionnement complet d'un serveur mail et d'apprendre à le déployer moi-même.
+        Je voulais passer de la théorie à la pratique en mettant en place une vraie messagerie fonctionnelle.
       </p>
+    </section>
+
+    <section class="card">
+      <h2>💻 2. Choix des outils</h2>
+      <p>Pour le webmail, j'ai choisi Roundcube, car c'est :</p>
+      <ul class="list">
+        <li>une solution open source</li>
+        <li>largement utilisée</li>
+        <li>simple d'accès pour les utilisateurs</li>
+      </ul>
+      <p>Cela m'a permis d'avoir une interface moderne sans coût supplémentaire.</p>
+    </section>
+
+    <section class="card">
+      <h2>🏗️ 3. Architecture technique</h2>
+      <p>Le serveur fonctionne sous Ubuntu 24.04.</p>
+      <p>Pour la partie mail, j'ai utilisé :</p>
+      <ul class="list">
+        <li>Postfix pour l'envoi des mails (SMTP)</li>
+        <li>Dovecot pour la gestion des boîtes mail (IMAP/POP)</li>
+      </ul>
+      <p>Roundcube sert d'interface web entre l'utilisateur et ces services.</p>
+    </section>
+
+    <section class="card">
+      <h2>👤 4. Utilisateurs</h2>
+      <p>Pour l'instant, la messagerie est utilisée par :</p>
+      <ul class="list">
+        <li>moi-même</li>
+        <li>un petit cercle d'amis</li>
+      </ul>
+      <p>Cela me permet de tester dans un cadre réel mais maîtrisé.</p>
+    </section>
+
+    <section class="card">
+      <h2>🔐 5. Sécurité</h2>
+      <p>J'ai sécurisé le serveur en mettant en place :</p>
+      <ul class="list">
+        <li>HTTPS</li>
+        <li>certificats TLS</li>
+      </ul>
+      <p>afin de chiffrer les échanges.</p>
+    </section>
+
+    <section class="card">
+      <h2>🌍 6. DNS et délivrabilité</h2>
+      <p>La configuration des DNS mail a été faite via OVH, avec notamment :</p>
+      <ul class="list">
+        <li>enregistrement MX</li>
+        <li>configuration liée aux échanges mail</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>🧪 7. Tests</h2>
+      <p>J'ai validé le fonctionnement en :</p>
+      <ul class="list">
+        <li>envoyant des mails</li>
+        <li>recevant des mails</li>
+      </ul>
+      <p>depuis différents comptes.</p>
+    </section>
+
+    <section class="card">
+      <h2>😅 8. Difficultés rencontrées</h2>
+      <p>Les principales difficultés ont été :</p>
+      <ul class="list">
+        <li>la configuration des services</li>
+        <li>la communication entre Postfix et Dovecot</li>
+        <li>la gestion des certificats</li>
+        <li>l'ouverture et la sécurisation des ports</li>
+      </ul>
+      <p>Cela m'a demandé beaucoup d'investigation.</p>
     </section>
   </main>
 
