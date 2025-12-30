@@ -1,4 +1,4 @@
-:root{background: #8b0000;
+:root{
   --purple-red: #7b1634;
   --bg: #f6f6f8;
   --text: #1f1f25;
@@ -19,6 +19,7 @@ body{
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.55;
+  min-height: 100vh;
 }
 
 /* ===============================
@@ -60,6 +61,10 @@ body{
   border-bottom: 1px solid #30363d;
 }
 
+.page-projets{
+  background-color: #fff;
+}
+
 /* ===============================
    BOUTONS
    =============================== */
@@ -80,21 +85,6 @@ body{
 .btn:focus-visible{
   transform: translateY(-1px);
   opacity: 0.95;
-}
-
-/* GitHub buttons */
-.page-projets .btn{
-  background-color: #21262d;
-  color: #f0f6fc;
-  border: 1px solid #30363d;
-  border-radius: 6px;
-  padding: 10px 16px;
-}
-
-.page-projets .btn:hover,
-.page-projets .btn:focus-visible{
-  background-color: #30363d;
-  border-color: #8b949e;
 }
 
 /* ===============================
@@ -125,6 +115,11 @@ body{
   background-color: #0d1117;
   border-color: #30363d;
   color: #c9d1d9;
+}
+
+.page-projets .footer{
+  background-color: #fff;
+  color: rgba(0,0,0,0.6);
 }
 
 /* ===============================
@@ -162,14 +157,15 @@ body{
 }
 
 .hero.hero-mail .btn{
-  background-color: rgba(255,255,255,0.08);
-  color: #f6fbff;
-  border-color: rgba(255,255,255,0.12);
+  background-color: #fff;
+  color: var(--purple-red);
+  border-color: rgba(255,255,255,0.45);
 }
 
 .hero.hero-mail .btn:hover,
 .hero.hero-mail .btn:focus-visible{
-  background-color: rgba(255,255,255,0.12);
+  background-color: #fff;
+  opacity: 0.95;
 }
 
 /* ===============================
