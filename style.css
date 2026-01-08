@@ -48,6 +48,15 @@ body{
   opacity: 0.92;
 }
 
+/* Nom sous le titre principal : plus grand que le texte normal, mais plus petit que le titre */
+.hero .name{
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+  font-size: clamp(18px, 3.2vw, 32px);
+  letter-spacing: -0.01em;
+}
+
 /* ===============================
    VARIANTES HERO
    =============================== */
