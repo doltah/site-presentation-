@@ -158,6 +158,21 @@ body{
   color: rgba(0,0,0,0.6);
 }
 
+/* Galerie d'images pour la page Minecraft */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+.gallery img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
 /* ===== PAGE MAIL : BANDEAU BLEU FONCÉ ===== */
 .hero.hero-mail{
   background: linear-gradient(180deg, #05243a 0%, #063a5a 100%);
