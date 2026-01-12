@@ -149,6 +149,39 @@ body{
   font-size: 14px;
 }
 
+/* Repo list styles for projets.html */
+.repo-list{
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+.repo{
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+}
+.repo h3{
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  color: var(--purple-red);
+}
+.repo p{
+  margin: 0;
+  color: rgba(0,0,0,0.8);
+}
+
+/* Dark block style for GitHub projects page: white text on black background */
+.dark-block{
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+.dark-block a{ color: #9fd3ff; }
+.dark-block h2, .dark-block h3{ color: #fff; margin-top: 0; }
+.dark-block ul{ color: #fff; margin-left: 1.2rem; }
+
 /* ===============================
    FOOTER
    =============================== */
