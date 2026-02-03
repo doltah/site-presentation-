@@ -206,6 +206,39 @@ body{
   border: 1px solid var(--border);
 }
 
+/* Lightbox pour agrandir les images Minecraft */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.lightbox.open{
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img{
+  max-width: min(100%, 980px);
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+  background: #000;
+}
+
+.gallery img{
+  cursor: zoom-in;
+}
+
 /* ===== PAGE MAIL : BANDEAU BLEU FONCÉ ===== */
 .hero.hero-mail{
   background: linear-gradient(180deg, #05243a 0%, #063a5a 100%);
