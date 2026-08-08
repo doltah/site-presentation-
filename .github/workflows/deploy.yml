@@ -19,9 +19,9 @@ jobs:
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_ZEUS }}" > ~/.ssh/deploy_key
+          echo "${{ secrets.ARES_SSH_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -p 9022 82.66.0.201 >> ~/.ssh/known_hosts
+          ssh-keyscan -p 8089 82.67.6.245 >> ~/.ssh/known_hosts
 
       - name: Deploy to server
         env:
@@ -33,20 +33,20 @@ jobs:
           echo "DEPLOY_PATH is set (length=${#DEPLOY_PATH})"
           echo "$DEPLOY_PATH" | sed -n l
       
-          ssh -i ~/.ssh/deploy_key -p 9022 \
-            "$SSH_USER@82.66.0.201" \
+          ssh -i ~/.ssh/deploy_key -p 8089 \
+           "$SSH_USER@82.67.6.245" \
             "mkdir -p '$DEPLOY_PATH'"
       
           rsync -avz --delete \
             --no-perms --no-owner --no-group --omit-dir-times \
-            -e "ssh -i ~/.ssh/deploy_key -p 9022" \
-            ./ "$SSH_USER@82.66.0.201:$DEPLOY_PATH/"
+            -e "ssh -i ~/.ssh/deploy_key -p 8089" \
+            ./ "$SSH_USER@82.67.6.245:$DEPLOY_PATH/"
 
       - name: Restart web server (optional)
         run: |
           if [ -n "${{ secrets.RESTART_COMMAND }}" ]; then
-            ssh -i ~/.ssh/deploy_key -p 9022 \
-              ${{ secrets.SSH_USER }}@82.66.0.201 \
+            ssh -i ~/.ssh/deploy_key -p 8089 \
+              ${{ secrets.SSH_USER }}@82.67.6.245 -p 8089 \
               "${{ secrets.RESTART_COMMAND }}"
           else
             echo "No RESTART_COMMAND defined, skipping."
