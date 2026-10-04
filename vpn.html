@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VPN WireGuard — Adrien</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page-vpn">
+  <header class="hero hero-vpn">
+    <div class="hero-inner">
+      <h1>VPN WireGuard</h1>
+      <p class="sub">Accéder à mon réseau local depuis n'importe où, de façon sécurisée.</p>
+      <a class="btn" href="index.html">← Retour à l'accueil</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1. À quoi sert mon VPN</h2>
+      <p>
+        Le VPN me permet de me connecter à mon réseau domestique depuis l'extérieur, comme si j'étais chez moi.
+        Je peux ainsi administrer mes serveurs et machines virtuelles à distance sans exposer chaque service sur Internet.
+        Tout le trafic passe dans un tunnel chiffré, même sur un Wi-Fi public.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2. Comment je l'ai mis en place</h2>
+      <p>
+        J'ai créé une machine virtuelle dédiée sous Debian sur mon hyperviseur, sur laquelle j'ai installé et configuré
+        WireGuard. J'ai défini un sous-réseau privé pour le VPN, ouvert un port UDP sur ma box, et généré une paire de
+        clés pour le serveur et pour chaque appareil. Deux clients sont configurés : mon iPhone et mon PC Windows.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>3. Sécurité et ce que j'en retire</h2>
+      <p>
+        L'authentification repose sur des clés cryptographiques : aucun mot de passe ne circule. J'ai remplacé le port
+        par défaut pour limiter les scans automatiques. Ce projet m'a fait progresser sur le routage, la redirection de
+        ports et la gestion des accès à distance.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Adrien — termite.ovh</p>
+  </footer>
+</body>
+</html>

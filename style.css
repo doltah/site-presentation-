@@ -258,6 +258,44 @@ body{
   opacity: 0.95;
 }
 
+/* ===== PAGE VPN : BANDEAU ANTHRACITE ===== */
+.hero.hero-vpn{
+  background: linear-gradient(180deg, #2f333b 0%, #262a32 100%);
+  color: #f7f8fb;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero.hero-vpn .btn{
+  background-color: #fff;
+  color: var(--purple-red);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.hero.hero-vpn .btn:hover,
+.hero.hero-vpn .btn:focus-visible{
+  background-color: #fff;
+  opacity: 0.95;
+}
+
+/* Ajustements VPN : meme presentation que Minecraft, avec un peu plus d'air */
+.page-vpn{
+  background-color: var(--bg);
+}
+
+.page-vpn .container{
+  margin: 24px auto;
+  padding: 0 16px 48px;
+  gap: 18px;
+}
+
+.page-vpn .card{
+  padding: 20px;
+}
+
+.page-vpn .card p{
+  margin: 0;
+}
+
 /* ===============================
    RESPONSIVE
    =============================== */
