@@ -120,6 +120,30 @@ body{
   font-size: 20px;
 }
 
+.contact-card{
+  border-left: 5px solid var(--purple-red);
+  background: linear-gradient(180deg, #ffffff 0%, #f9f4f6 100%);
+}
+
+.contact-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-list a{
+  color: var(--purple-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-list a:hover,
+.contact-list a:focus-visible{
+  text-decoration: underline;
+}
+
 .page-projets .card{
   background-color: #0d1117;
   border-color: #30363d;
